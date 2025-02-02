@@ -6,12 +6,12 @@ nav: true
 nav_order: 1
 projects:
   - title: "Planning with Diffusion via Constraint Verification for Physics-Based Characters"
-    description: "In Submission"
+    description: "In Submission!"
     image: "/assets/img/diff_planner_cover.png"
     publication: false
 
   - title: "Imitation-Free Reinforcement Learning with Masked Constraints for Walking Controllers"
-    description: "In Submission"
+    description: "In Submission!"
     image: "/assets/img/walk_this_way_cover_img.png"
     publication: false
 
