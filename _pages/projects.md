@@ -10,10 +10,10 @@ projects:
     image: "/assets/img/diff_planner_cover.png"
     publication: false
 
-  - title: "Imitation-Free Reinforcement Learning with Masked Constraints for Walking Controllers"
-    description: "In Submission!"
-    image: "/assets/img/walk_this_way_cover_img.png"
-    publication: false
+  # - title: "Imitation-Free Reinforcement Learning with Masked Constraints for Walking Controllers"
+  #   description: "In Submission!"
+  #   image: "/assets/img/walk_this_way_cover_img.png"
+  #   publication: false
 
   - title: "Robot-to-Robot transfer for Quadrupedal Locomotion"
     description: "Course Research Project during Masters"
