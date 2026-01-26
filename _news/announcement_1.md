@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-05-01 15:59:00-0400
+date: 2021-10-22 16:11:00-0400
 inline: true
 ---
 
-Started as undergraduate research assistant at Mark Schmidt's Lab in UBC
+Our work got accepted in NeurIPS 2021 Deep RL Workshop

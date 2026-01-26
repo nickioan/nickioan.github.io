@@ -66,4 +66,19 @@
   .project-links a:hover {
     text-decoration: underline;
   }
-  
+
+  /* Bibtex reveal */
+  .project-details .hidden {
+    font-size: 0.9em;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.15s ease;
+  }
+
+  .project-details .hidden.open {
+    max-height: 100em;
+  }
+
+  .project-details .bibtex pre {
+    margin-top: 10px;
+  }

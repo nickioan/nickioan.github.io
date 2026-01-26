@@ -2,8 +2,9 @@
 layout: page
 permalink: /projects/
 title: "Projects"
-nav: true
+nav: false
 nav_order: 1
+redirect: /
 projects:
   - title: "Planning with Diffusion via Constraint Verification for Physics-Based Characters"
     description: "In Submission!"
