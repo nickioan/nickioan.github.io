@@ -35,12 +35,33 @@ body.sticky-bottom-footer {
 // }
 
 .profile {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 1.5rem;
+  float: none !important;
+
+  figure {
+    margin: 0;
+  }
+
   img {
-    width: 125%; /* Adjust to your liking */
-    max-width: 600px; /* Ensures it doesn't get too big on large screens */
-    height: auto; /* Maintains aspect ratio */
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .profile {
+    max-width: none;
+    margin: 0 0 1rem 1rem;
+    float: right !important;
+  }
+
+  .profile.float-left {
+    margin: 0 1rem 1rem 0;
+    float: left !important;
   }
 }
 
