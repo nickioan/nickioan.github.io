@@ -2,6 +2,23 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+// Skip to main content (accessibility)
+.skip-to-main {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--global-theme-color);
+  color: #fff;
+  z-index: 9999;
+  font-weight: bold;
+  &:focus {
+    top: 0;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
 // Typography
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
