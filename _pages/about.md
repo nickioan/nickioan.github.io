@@ -17,7 +17,7 @@ projects:
 
   - title: "OpenSim2Real: An End-To-End Open Source Robotic Platform for Sim2Real Research"
     description: "Engineering Capstone Project"
-    image: "/assets/img/OpenSim2Real.png"
+    image: "/assets/img/OpenSim2Real_thumb.png"
     links:
       page: "https://opensim2real.github.io/os2r-superbuild/docs/index.html"
       video: "https://www.youtube.com/watch?v=6FDHketaaDo"
@@ -63,4 +63,4 @@ research:
     bibkey: "ioannidis2021an"
 ---
 
-I'm Nick, a Ph.D student in Computing Science at Simon Fraser University (SFU) under the supervision of Dr. <a href='https://xbpeng.github.io/'>Xue Bin (Jason) Peng</a>. I am interested on making robots and simulated characters move in smart, safe, and physically realistic ways.
+I'm Nick, a Ph.D. student in Computing Science at Simon Fraser University (SFU) under the supervision of Dr. <a href='https://xbpeng.github.io/'>Xue Bin (Jason) Peng</a>. I am interested in making robots and simulated characters move in smart, safe, and physically realistic ways.

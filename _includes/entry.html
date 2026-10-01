@@ -1,0 +1,52 @@
+{%- comment -%}
+  One research / project entry. Pass the item as `entry`:
+  {% include entry.html entry=project %}
+{%- endcomment -%}
+{%- assign e = include.entry -%}
+<div class="project">
+  <div class="project-thumbnail">
+    <img src="{{ e.image | relative_url }}" alt="Thumbnail for {{ e.title }}" loading="lazy">
+  </div>
+  <div class="project-details">
+    <h3>{{ e.title }}</h3>
+
+    {%- if e.publication %}
+      <p class="authors">
+        {%- for author in e.authors -%}
+          {%- assign author_lc = author | downcase -%}
+          {%- assign self_lc = site.last_name | downcase -%}
+          {%- if author_lc contains self_lc -%}
+            <strong>{{ author }}</strong>
+          {%- else -%}
+            {{ author }}
+          {%- endif -%}
+          {%- unless forloop.last -%}, {% endunless -%}
+        {%- endfor -%}
+      </p>
+      <p class="venue">{{ e.venue }}</p>
+    {%- else %}
+      <p class="venue">{{ e.description }}</p>
+    {%- endif %}
+
+    <div class="project-links">
+      {%- if e.links.page %}<a href="{{ e.links.page }}" target="_blank" rel="noopener">Project Page</a>{% endif -%}
+      {%- if e.links.paper %}<a href="{{ e.links.paper }}" target="_blank" rel="noopener">Paper</a>{% endif -%}
+      {%- if e.links.video %}<a href="{{ e.links.video }}" target="_blank" rel="noopener">Video</a>{% endif -%}
+      {%- if e.bibtex or e.bibkey %}<a class="bibtex" role="button" tabindex="0">Cite</a>{% endif -%}
+    </div>
+
+    {%- if e.bibtex or e.bibkey %}
+    <div class="bibtex hidden">
+      {%- if e.bibtex -%}
+        {% highlight bibtex %}{{ e.bibtex | hideCustomBibtex }}{% endhighlight %}
+      {%- else -%}
+        {%- capture bibtex_raw -%}{{ e.bibkey | bibtex_for: 'papers' | hideCustomBibtex }}{%- endcapture -%}
+        {%- assign bibtex_check = bibtex_raw | strip -%}
+        {%- if bibtex_check != "" -%}
+          {% highlight bibtex %}{{ bibtex_raw }}{% endhighlight %}
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+    {%- endif %}
+  </div>
+</div>

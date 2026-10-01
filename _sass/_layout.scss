@@ -7,6 +7,8 @@ body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
   font-size: 1.2rem; /* Slightly larger base size for overall scale */
+  font-family: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
 
   h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: 66px;
@@ -82,3 +84,14 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+
+/*****************************************************************************
+* Headings
+*****************************************************************************/
+
+.post-title {
+  font-family: var(--global-heading-font);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}

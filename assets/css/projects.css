@@ -1,84 +1,131 @@
-/* Style for the projects section */
-.projects-section {
-    margin: 20px 0;
-  }
-  
-  /* Styling each individual project */
+/* Section headings (Research, Projects, News) */
+.section-title {
+  font-family: var(--global-heading-font);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2.75rem 0 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+/* Contact icons under the bio */
+.social-inline {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.social-inline a {
+  margin-right: 0.6rem;
+}
+
+.social-inline a i::before {
+  color: var(--global-text-color-light);
+  transition: color 0.15s ease;
+}
+
+.social-inline a:hover i::before {
+  color: var(--global-theme-color);
+}
+
+/* One research / project entry: thumbnail on the left, text on the right */
+.project {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-thumbnail {
+  flex: 0 0 200px;
+}
+
+.project-thumbnail img {
+  display: block;
+  width: 200px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+}
+
+.project-details {
+  flex: 1;
+  min-width: 0; /* lets long titles wrap instead of overflowing the column */
+}
+
+.project-details h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.project-details p {
+  margin: 0 0 0.15rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-details p.venue {
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+
+/* Links as small outlined pills */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 0.1rem 0.65rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 999px;
+  color: var(--global-theme-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.project-links a:hover,
+.project-links a:focus {
+  background-color: var(--global-theme-color);
+  color: var(--global-bg-color);
+  text-decoration: none;
+}
+
+/* Bibtex reveal */
+.project-details .hidden {
+  font-size: 0.85em;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+
+.project-details .hidden.open {
+  max-height: 100em;
+}
+
+.project-details .bibtex pre {
+  margin-top: 10px;
+}
+
+/* Phones: stack thumbnail above the text */
+@media (max-width: 576px) {
   .project {
-    display: flex;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd; /* Creates a separator between projects */
+    flex-direction: column;
+    gap: 0.75rem;
   }
-  
-  /* Content of the project (image and details side by side) */
-  .project-content {
-    display: flex;
-    align-items: flex-start; /* Aligns the content vertically */
-  }
-  
-  /* Style for the project thumbnail (image) */
-  .project-thumbnail {
-    margin-right: 20px; /* Adds space between image and text */
-  }
-  
+
+  .project-thumbnail,
   .project-thumbnail img {
-    width: 150px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional, smooth corners */
-    object-fit: cover; /* Ensures the image covers the designated space */
-    border: 1px solid #ddd; /* Optional border around the image */
+    flex-basis: auto;
+    width: 100%;
+    height: 180px;
   }
-  
-  /* Style for the project details (text and links) */
-  .project-details {
-    flex: 1;
-  }
-  
-  /* Project title */
-  .project-details h3 {
-    margin-top: 0;
-    font-size: 1.3em; /* Larger title font size */
-    font-weight: bold;
-  }
-  
-  /* General project description and author information */
-  .project-details p {
-    margin: 5px 0;
-    line-height: 1.5;
-    font-size: 1em;
-  }
-  
-  /* Strong emphasis for author names */
-  .project-details p strong {
-    font-weight: bold;
-  }
-  
-  /* Style for the project links (Project Page / Paper / Video) */
-  .project-links a {
-    color: #007acc; /* Blue link color */
-    text-decoration: none;
-    font-size: 1em; /* Standard font size */
-    margin-right: 10px; /* Adds space between the links */
-  }
-  
-  /* Hover effect for links */
-  .project-links a:hover {
-    text-decoration: underline;
-  }
-
-  /* Bibtex reveal */
-  .project-details .hidden {
-    font-size: 0.9em;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.15s ease;
-  }
-
-  .project-details .hidden.open {
-    max-height: 100em;
-  }
-
-  .project-details .bibtex pre {
-    margin-top: 10px;
-  }
+}
